@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>Todo-List</h1>
+    <div id="input-container">
+        <form action="/todo" method="POST">
+            <input type="text" name="title" placeholder="新增記事">
+            <button type="submit">send</button>
+        </form>
+    </div>
+    <div class="list-todo-container">
+        <table border=“1px“>
+            <tr>
+                    <td>編號</td>
+                    <td>標題</td>
+                    <td>建立時間</td>
+                    <td>修改時間</td>
+            </tr>
+            <% todos.forEach(function(todo) { %>
+                <tr>
+                    <td><%= todo.id %></td>
+                    <td><%= todo.title %></td>
+                    <td><%= todo.createdAt %></td>
+                    <td><%= todo.updatedAt %></td>
+                </tr>
+            <% }) %>
+        </table>
+    </div>
+</div>

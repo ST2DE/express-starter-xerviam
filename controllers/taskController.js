@@ -14,5 +14,17 @@ let taskController = {
         res.json(tasks);
       });
   },
+  todo: function(req, res) {
+    Task.findAll()
+    .then(function(tasks) {
+      res.render('todo', {"todos": tasks})
+    })
+  },
+  createTodo: function(req, res) {
+    var todo = req.body.title;
+    console.log(todo)
+    Task.create({"title": todo})
+    .then(res.redirect('/todo'))
+  }
 };
 module.exports = taskController;
