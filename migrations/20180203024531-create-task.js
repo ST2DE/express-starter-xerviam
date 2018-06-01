@@ -18,7 +18,22 @@ module.exports = {
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE
+      },
+      deleted: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
+      },
+      deletedAt: {
+        allowNull: true,
+        type: Sequelize.DATE
+      },
+      isDone: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
+        defaultValue: false
       }
+
     });
   },
   down: (queryInterface, Sequelize) => {

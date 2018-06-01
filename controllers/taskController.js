@@ -14,17 +14,29 @@ let taskController = {
         res.json(tasks);
       });
   },
-  todo: function(req, res) {
-    Task.findAll()
-    .then(function(tasks) {
-      res.render('todo', {"todos": tasks})
+  createTask: function(req, res) {
+    var newTask = req.body.title
+    Task.create({
+      "title": newTask,
+    }).then(res.redirect('/'))
+  },
+  deleteTask: function(req, res) {
+    var id = req.params.id;
+    Task.findById(id).then(task => {
+      task.destroy()
     })
   },
-  createTodo: function(req, res) {
-    var todo = req.body.title;
-    console.log(todo)
-    Task.create({"title": todo})
-    .then(res.redirect('/todo'))
+  updateTask: function(req, res) {
+    var id = req.params.id;
+    var newTask = req.body.title;
+    Task.findById(id).then(task => {
+      task.update({
+        title: newTask
+      }).then(() => {
+        res.status(204).send()
+      })
+    })
   }
+
 };
 module.exports = taskController;

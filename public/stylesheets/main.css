@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box; }
+
+#main-page {
+  margin: 0 auto;
+  max-width: 800px;
+  height: 500px;
+  background: #e2e2d7;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px; }
+
+.page-header {
+  height: 60px;
+  border-bottom: 1px solid black;
+  display: flex;
+  justify-content: center; }
+
+.page-footer {
+  padding: 1px;
+  height: 30px;
+  border-top: 1px solid black;
+  background: #e2e2d7;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  display: flex;
+  justify-content: center; }
+  .page-footer .show-all {
+    color: gray;
+    border: 0.5px solid;
+    border-radius: 2px; }
+  .page-footer .show-active {
+    color: gray;
+    border: 0.5px solid;
+    border-radius: 2px; }
+  .page-footer .show-done {
+    color: gray;
+    height: auto;
+    border: 0.5px solid;
+    border-radius: 2px; }
+  .page-footer .showed {
+    background: black;
+    color: white; }
+
+.note-container {
+  height: 440px;
+  background: white;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+  .note-container .note-row {
+    max-width: 800px;
+    height: 73.3333333333px;
+    padding: 0 10px;
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center; }
+
+.text-container {
+  width: 75%; }
+  .text-container .note-text {
+    font-family: sans-serif;
+    font-size: 1.5em; }
+  .text-container .text-input {
+    position: relative;
+    height: 73.3333333333px;
+    width: 75%;
+    display: none; }
+
+.btn-container {
+  height: 73.3333333333px;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+  .btn-container .delete-btn {
+    border: 0.5px solid red;
+    border-radius: 2px; }
+  .btn-container .edit-btn {
+    border: 0.5px solid green;
+    border-radius: 2px; }
+  .btn-container .done-btn {
+    border: 0.5px solid blue;
+    border-radius: 2px; }
+
+.done {
+  text-decoration: line-through;
+  color: lightgray;
+  opacity: 0.5; }
+
+/*# sourceMappingURL=main.css.map */

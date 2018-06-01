@@ -16,10 +16,16 @@ module.exports = {
         title: '測試 A',
         createdAt : new Date(),
         updatedAt : new Date(),
+        deleted: false,
+        deletedAt: null,
+        isDone: false
       }, {
         title: '測試 B',
         createdAt : new Date(),
         updatedAt : new Date(),
+        deleted: false,
+        deletedAt: null,
+        isDone: false
       }], {});
   },
 
